@@ -89,9 +89,9 @@ select {
 #cancel-edit-btn {
     margin-top: 1rem;
 }
-
+git 
 /* Todo toolbar */
-
+/* 
 #toolbar {
     padding: 1rem;
     border-bottom: 1px solid #ccc3c3;
@@ -128,7 +128,7 @@ select {
 
 #filter select {
     flex: 1;
-}
+} */
 
 /* Todo list */
 
