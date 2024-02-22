@@ -78,10 +78,12 @@ document.addEventListener("click", (e) => {
 
     if (targetEl.classList.contains("finish-todo")) {
         parentEl.classList.toggle("done");
+        atualizarContador();
     }
 
     if (targetEl.classList.contains("remove-todo")) {
         parentEl.remove();
+        atualizarContador();
     }
 
     if (targetEl.classList.contains("edit-todo")) {
@@ -109,3 +111,37 @@ editForm.addEventListener("submit", (e) => {
 
     toggleForms();
 });
+
+// Contador de tarefas criadas
+
+const contadorTarefas = document.querySelector("#contador-tarefas");
+// Contador inicial
+contadorTarefas.textContent = todoList.children.length;
+
+// Observador de mudanças de divs
+const observerTodoCreated = new MutationObserver(function (mutations) {
+    // Atualizar o contador sempre que houver uma mudança
+    contadorTarefas.textContent = todoList.children.length;
+});
+
+// Configurar opções para o observador de mutação
+const configTodoCreated = { childList: true };
+
+// Observar mudanças no contêiner de divs com as opções configuradas
+observerTodoCreated.observe(todoList, configTodoCreated);
+
+// Contador tarefas Finalizadas
+
+// Função para atualizar o contador
+// Adicionada aos botões finish-todo e remove-todo
+
+const contadorFinish = document.querySelector("#contador-finish");
+
+function atualizarContador() {
+    const todoFinished = document.querySelectorAll(".done");
+    contadorFinish.textContent = todoFinished.length;
+}
+atualizarContador();
+
+
+
