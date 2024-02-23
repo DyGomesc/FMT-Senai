@@ -1,0 +1,39 @@
+/* Variáveis CSS */
+
+:root{
+    --bg-color: #ffffff;
+    --text-color: #2D2D2D;
+    --primary-color: #222;
+    --secondary-color: #ec5840;
+
+    --font-primary: "Epilogue", sans-serif;
+}
+
+.dark-mode:root{
+    --bg-color: #212529;
+    --text-color: #899095;
+    --primary-color: #dee2e6;
+    --secondary-color: #3cc368;
+}
+
+/* Resets padrão */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* CSS Index */
+
+body{
+    font-family: var(--font-primary);
+}
