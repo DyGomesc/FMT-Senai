@@ -1,15 +1,15 @@
 /* Variáveis CSS */
 
-:root{
+:root {
     --bg-color: #ffffff;
-    --text-color: #2D2D2D;
+    --text-color: #2d2d2d;
     --primary-color: #222;
     --secondary-color: #ec5840;
 
     --font-primary: "Epilogue", sans-serif;
 }
 
-.dark-mode:root{
+.dark-mode:root {
     --bg-color: #212529;
     --text-color: #899095;
     --primary-color: #dee2e6;
@@ -18,22 +18,83 @@
 
 /* Resets padrão */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-}
-
-ul{
+ul {
     list-style: none;
 }
 
-/* CSS Index */
+a {
+    text-decoration: none;
+}
 
-body{
+html {
     font-family: var(--font-primary);
+}
+
+body {
+    background: var(--bg-color);
+}
+
+nav {
+    max-width: 1280px;
+    height: 80px;
+    margin: auto;
+    padding: 1.5rem 10rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    width: 7rem;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 16.75rem;
+    height: 1.75rem;
+    gap: 1.6rem;
+}
+
+.menu li a {
+    color: var(--text-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio {
+    max-width: 1280px;
+    height: 60vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+.portfolio-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+}
+
+.portfolio-image{
+    max-width: 60%;
+}
+
+.portfolio-image > figure > img{
+    width: 100%;
 }
